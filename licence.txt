@@ -1,0 +1,15 @@
+LICENCE ASSITOOLS - INTERDICTION COMMERCIALE
+
+Droit d'auteur (c) 2025 Assitools
+
+Ce programme est un logiciel libre : vous pouvez le redistribuer et/ou le modifier sous les termes de cette licence, sous réserve des conditions suivantes :
+
+Interdiction commerciale : L'utilisation, la distribution et la modification de ce logiciel sont autorisées uniquement à des fins non commerciales. Toute vente, monétisation ou exploitation commerciale sous quelque forme que ce soit est strictement interdite.
+
+Modification et redistribution : Vous pouvez modifier et redistribuer ce logiciel, à condition que le code source reste librement accessible et que cette même licence s'applique à toutes les copies ou versions modifiées.
+
+Aucune garantie : Ce logiciel est fourni "TEL QUEL", sans aucune garantie explicite ou implicite. L'auteur ne pourra être tenu responsable de tout dommage résultant de son utilisation.
+
+Inclusion de cette licence : Toute copie ou modification du logiciel doit inclure cette licence dans son intégralité.
+
+Contact : https://assistouest.fr
