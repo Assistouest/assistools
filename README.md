@@ -11,6 +11,5 @@ Nettoyage des fichiers temporaires : Suppression des fichiers temporaires, vidag
 
 Optimisation des performances : Ajustement des paramètres système et nettoyage en profondeur pour booster la vitesse et la réactivité de votre ordinateur.
 
-Prérequis
-Système d'exploitation : Windows 10 ou Windows 11
+Prérequis : Windows OS (7, 8, 8.1, 10, 11)
 Logiciels requis : Visual C++ Redistributable Runtimes 2015
