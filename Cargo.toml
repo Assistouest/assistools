@@ -1,11 +1,11 @@
 [package]
 name = "Assistools"
-version = "0.2.0"
+version = "1.0.0"
 edition = "2021"
 
 [dependencies]
 tauri = "1.2"
-eframe = "0.23"
+eframe = "0.31"
 winapi = { version = "0.3", features = ["winuser", "wingdi", "winbase"] }  # Ajout de wingdi
 winres = "0.1"  
 image = "0.24"
@@ -16,6 +16,19 @@ dirs-next = "2.0"  # Pour obtenir les répertoires de configuration tels que App
 chrono = "0.4"
 enigo = "0.0.14"
 encoding_rs = "0.8"
+glob = "0.3"
+
+[profile.release]
+opt-level = 3     # Optimisation maximale pour la vitesse
+lto = "fat"
+debug = false
+incremental = false
+overflow-checks = false
+
+codegen-units = 1 # Meilleure optimisation globale (mais compilation plus longue)
+strip = true       
+
+
 
 [[bin]]
 name = "Assistools"
