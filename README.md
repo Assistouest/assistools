@@ -2,10 +2,12 @@
 
 Il y a quelques années, j’ai été appelé chez un couple de retraités paniqués. Leur ordinateur, un modèle pourtant correct mettait plus de dix minutes à démarrer.
 - "Il est cassé, non ?" m’a demandé monsieur les sourcils froncés devant son écran figé.
-- Non, il n’était pas cassé, juste étouffé sous des années de fichiers inutiles, de mises à jour jamais faites et de logiciels oubliés mais toujours actifs en arrière-plan.
+
+Non, il n’était pas cassé, juste étouffé sous des années de fichiers inutiles, de mises à jour jamais faites et de logiciels oubliés mais toujours actifs en arrière-plan.
 
 Quelques jours plus tard, c’est un étudiant qui me contacte :
 - "Mon PC est devenu une tortue, impossible de jouer sans lag !"
+
 En regardant son système, je découvre un disque dur saturé par des gigas de fichiers temporaires, des dizaines de programmes installés "juste pour essayer" et aucune mise à jour Windows depuis des mois.
 Même histoire, des profils différents mais une cause commune : personne ne prend le temps d’entretenir son PC.
 
