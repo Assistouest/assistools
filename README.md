@@ -2,6 +2,13 @@
 
 **Assitools** est un logiciel gratuit de maintenance informatique conçu pour optimiser, réparer et nettoyer votre ordinateur Windows en un seul clic. Il simplifie l'entretien de votre système en automatisant des tâches essentielles pour garantir des performances optimales et une stabilité accrue.
 
+## Qu’est-ce qu’Assitools ? 👇
+- **Maintenance Tout-en-Un :** Un seul clic pour nettoyer votre disque, réparer votre système, mettre à jour Windows et booster les performances.
+- **Optimisation Avancée :** Des outils intelligents pour défragmenter, ajuster la mémoire virtuelle et automatiser le nettoyage de Windows.
+- **Multilingue :** Disponible en 11 langues .
+- **100% Gratuit :** Profitez d’un entretien complet de votre PC sans frais cachés.
+
+
 ## Fonctionnalités principales
 
 ### 1. **Maintenance en un clic**
