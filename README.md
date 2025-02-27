@@ -1,8 +1,15 @@
-# Assitools : Logiciel de Maintenance Informatique Gratuit
+# Assistools : Le logiciel de maintenance Windows gratuit en un clic
 
-**Assitools** est un logiciel gratuit de maintenance informatique conçu pour optimiser, réparer et nettoyer votre ordinateur Windows en un seul clic. Il simplifie l'entretien de votre système en automatisant des tâches essentielles pour garantir des performances optimales et une stabilité accrue.
+Il m’est arrivé d’intervenir chez des clients dont l’ordinateur mettait plus de cinq minutes à démarrer, ou qui se plaignaient de lenteurs insupportables, sans jamais comprendre pourquoi. "Je ne télécharge rien pourtant !" me disent-ils souvent. Mais en regardant de plus près, je découvre des fichiers temporaires accumulés depuis des années, un disque fragmenté à l’extrême et un Windows qui n’a jamais été mis à jour.
+
+Que ce soit papi et mamie qui utilisent leur PC uniquement pour Skype et quelques mails ou les jeunes qui jouent et installent des tonnes de programmes sans jamais les nettoyer, le constat est le même : la maintenance, ça passe à la trappe. Personne ne veut s’embêter avec ces tâches pourtant essentielles, jusqu’au jour où tout plante, où le PC rame tellement qu’il devient inutilisable.
+
+C’est là qu’intervient Assistools. Un logiciel pensé pour ceux qui n’ont ni le temps ni l’envie de plonger dans les paramètres techniques. Un clic suffit pour nettoyer, réparer et optimiser son ordinateur, sans poser de questions compliquées. Plus besoin d’attendre qu’un technicien vienne sauver la situation : Assistools s’occupe de tout, automatiquement. 🚀
+
 
 ## Qu’est-ce qu’Assitools ? 👇
+**Assitools** est un logiciel gratuit de maintenance informatique conçu pour optimiser, réparer et nettoyer votre ordinateur Windows en un seul clic. Il simplifie l'entretien de votre système en automatisant des tâches essentielles pour garantir des performances optimales et une stabilité accrue.
+
 - **Maintenance Tout-en-Un :** Un seul clic pour nettoyer votre disque, réparer votre système, mettre à jour Windows et booster les performances.
 - **Optimisation Avancée :** Des outils intelligents pour défragmenter, ajuster la mémoire virtuelle et automatiser le nettoyage de Windows.
 - **Mise à Jour de Windows :** Télécharge et installe automatiquement les mises à jour essentielles pour garder votre PC sécurisé et performant.  
