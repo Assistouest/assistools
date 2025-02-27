@@ -26,6 +26,7 @@ Plonger dans les paramètres, supprimer les fichiers inutiles, réparer Windows,
 
 Beaucoup préfèrent attendre qu’un technicien vienne sauver la situation ou pire, acheter un nouvel ordinateur alors qu’un simple entretien aurait suffi...
 
+- Je ne peux pas me permettre d’être un jour sans ordinateur", m'a-t-on déjà dit !
 
 ## Qu’est-ce qu’Assitools ? 👇
 Assitools est un logiciel gratuit de maintenance informatique conçu pour optimiser, réparer et nettoyer votre ordinateur Windows en un seul clic. Il simplifie l'entretien de votre système en automatisant des tâches essentielles pour garantir des performances optimales et une stabilité accrue.
