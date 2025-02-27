@@ -5,15 +5,28 @@
 ## Qu’est-ce qu’Assitools ? 👇
 - **Maintenance Tout-en-Un :** Un seul clic pour nettoyer votre disque, réparer votre système, mettre à jour Windows et booster les performances.
 - **Optimisation Avancée :** Des outils intelligents pour défragmenter, ajuster la mémoire virtuelle et automatiser le nettoyage de Windows.
-- **Multilingue :** Disponible en 11 langues .
-- **100% Gratuit :** Profitez d’un entretien complet de votre PC sans frais cachés.
+- - **Mise à Jour de Windows :** Télécharge et installe automatiquement les mises à jour essentielles pour garder votre PC sécurisé et performant.  
+- **Multilingue :** Disponible en **11 langues** pour s’adapter à vos besoins et préférences.  
+- **100% Gratuit :** Profitez d’un entretien complet de votre PC **sans frais cachés**.
 
+- ## 🌍 Assistools est disponible en 11 langues :
+
+1. 🇫🇷 **Français**  
+2. 🇬🇧 **Anglais**  
+3. 🇪🇸 **Espagnol**  
+4. 🇨🇳 **Chinois**  
+5. 🇸🇦 **Arabe**  
+6. 🇮🇳 **Hindi**  
+7. 🇵🇹 **Portugais**  
+8. 🇷🇺 **Russe**  
+9. 🇩🇪 **Allemand**  
+10. 🇯🇵 **Japonais**  
+11. 🇹🇿 **Swahili**  
 
 ## Fonctionnalités principales
 
 ### 1. **Maintenance en un clic**
    - **Analyse complète du système** pour détecter et corriger automatiquement les erreurs potentielles.
-   - **Élimination des failles de sécurité** et amélioration des performances générales de l'ordinateur.
 
 ### 2. **Réparation du système**
    - Utilisation des commandes **DISM** et **SFC** pour vérifier et réparer les images système et les fichiers corrompus.
@@ -33,8 +46,11 @@
 
 ## Prérequis
 - **Système d'exploitation** : Windows 7, 8, 8.1, 10, 11
-- **Dépendance** : Visual C++ Redistributable Runtimes 2015
+- **Dépendance** : Visual C++ Redistributable Runtimes 2015 (automatique avec l'installateur)
 
+  Rejoignez la communauté d’utilisateurs qui ont choisi Assitools pour transformer leur quotidien numérique. **Dites adieu aux lenteurs et aux dysfonctionnements** et faites place à la performance et à la stabilité ! 🚀
+
+🔽 **Téléchargez Assitools dès maintenant !** 🔽  
 
 Dernière version disponible ici : [https://github.com/Assistouest/assistools/releases/](https://github.com/Assistouest/assistools/releases/)
 
