@@ -1,7 +1,7 @@
 # Assistools : Le logiciel de maintenance Windows gratuit en un clic
 
 Il y a quelques années, j’ai été appelé chez un couple de retraités paniqués. Leur ordinateur, un modèle pourtant correct mettait plus de dix minutes à démarrer.
-- "Il est cassé, non ?" m’a demandé monsieur les sourcils froncés devant son écran figé.
+- "Il est cassé, non ?" m’a demandé monsieur devant son écran figé.
 
 Non, il n’était pas cassé, juste étouffé sous des années de fichiers inutiles, de mises à jour jamais faites et de logiciels oubliés mais toujours actifs en arrière-plan.
 
