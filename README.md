@@ -1,10 +1,22 @@
 # Assistools : Le logiciel de maintenance Windows gratuit en un clic
 
-Il m’est arrivé d’intervenir chez des clients dont l’ordinateur mettait plus de cinq minutes à démarrer, ou qui se plaignaient de lenteurs insupportables, sans jamais comprendre pourquoi. "Je ne télécharge rien pourtant !" me disent-ils souvent. Mais en regardant de plus près, je découvre des fichiers temporaires accumulés depuis des années, un disque fragmenté à l’extrême et un Windows qui n’a jamais été mis à jour.
+Il y a quelques années, j’ai été appelé chez un couple de retraités paniqués. Leur ordinateur, un modèle pourtant correct mettait plus de dix minutes à démarrer.
+- "Il est cassé, non ?" m’a demandé monsieur les sourcils froncés devant son écran figé.
+- Non, il n’était pas cassé, juste étouffé sous des années de fichiers inutiles, de mises à jour jamais faites et de logiciels oubliés mais toujours actifs en arrière-plan.
 
-Que ce soit papi et mamie qui utilisent leur PC uniquement pour Skype et quelques mails ou les jeunes qui jouent et installent des tonnes de programmes sans jamais les nettoyer, le constat est le même : la maintenance, ça passe à la trappe. Personne ne veut s’embêter avec ces tâches pourtant essentielles, jusqu’au jour où tout plante, où le PC rame tellement qu’il devient inutilisable.
+Quelques jours plus tard, c’est un étudiant qui me contacte :
+- "Mon PC est devenu une tortue, impossible de jouer sans lag !"
+En regardant son système, je découvre un disque dur saturé par des gigas de fichiers temporaires, des dizaines de programmes installés "juste pour essayer" et aucune mise à jour Windows depuis des mois.
+Même histoire, des profils différents mais une cause commune : personne ne prend le temps d’entretenir son PC.
 
-C’est là qu’intervient Assistools. Un logiciel pensé pour ceux qui n’ont ni le temps ni l’envie de plonger dans les paramètres techniques. Un clic suffit pour nettoyer, réparer et optimiser son ordinateur, sans poser de questions compliquées. Plus besoin d’attendre qu’un technicien vienne sauver la situation : Assistools s’occupe de tout, automatiquement. 🚀
+Que ce soit papi et mamie qui se contentent d’envoyer quelques mails et de passer des appels vidéo ou les plus jeunes qui installent et désinstallent à la volée sans se soucier des fichiers résiduels, la réalité est la même : la maintenance passe toujours en dernier.
+Jusqu’au jour où… c’est trop tard.
+Le PC rame, plante ou ne démarre plus.
+Et c’est là que les ennuis commencent.
+
+Soyons honnêtes : personne ne veut perdre du temps à nettoyer son ordinateur.
+Plonger dans les paramètres, supprimer les fichiers inutiles, réparer Windows, mettre à jour les pilotes… ça semble compliqué, fastidieux et risqué.
+Beaucoup préfèrent attendre qu’un technicien vienne sauver la situation ou pire, acheter un nouvel ordinateur alors qu’un simple entretien aurait suffi...
 
 
 ## Qu’est-ce qu’Assitools ? 👇
