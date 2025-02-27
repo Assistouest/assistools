@@ -13,12 +13,17 @@ En regardant son système, je découvre un disque dur saturé par des gigas de f
 Même histoire, des profils différents mais une cause commune : personne ne prend le temps d’entretenir son PC.
 
 Que ce soit papi et mamie qui se contentent d’envoyer quelques mails et de passer des appels vidéo ou les plus jeunes qui installent et désinstallent à la volée sans se soucier des fichiers résiduels, la réalité est la même : la maintenance passe toujours en dernier.
+
 Jusqu’au jour où… c’est trop tard.
+
 Le PC rame, plante ou ne démarre plus.
+
 Et c’est là que les ennuis commencent.
 
 Soyons honnêtes : personne ne veut perdre du temps à nettoyer son ordinateur.
+
 Plonger dans les paramètres, supprimer les fichiers inutiles, réparer Windows, mettre à jour les pilotes… ça semble compliqué, fastidieux et risqué.
+
 Beaucoup préfèrent attendre qu’un technicien vienne sauver la situation ou pire, acheter un nouvel ordinateur alors qu’un simple entretien aurait suffi...
 
 
