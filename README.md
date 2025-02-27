@@ -9,6 +9,7 @@ Quelques jours plus tard, c’est un étudiant qui me contacte :
 - "Mon PC est devenu une tortue, impossible de jouer sans lag !"
 
 En regardant son système, je découvre un disque dur saturé par des gigas de fichiers temporaires, des dizaines de programmes installés "juste pour essayer" et aucune mise à jour Windows depuis des mois.
+
 Même histoire, des profils différents mais une cause commune : personne ne prend le temps d’entretenir son PC.
 
 Que ce soit papi et mamie qui se contentent d’envoyer quelques mails et de passer des appels vidéo ou les plus jeunes qui installent et désinstallent à la volée sans se soucier des fichiers résiduels, la réalité est la même : la maintenance passe toujours en dernier.
