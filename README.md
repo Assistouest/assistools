@@ -53,7 +53,8 @@
 - 🖥️ **PowerShell** : Utilisé pour certaines automatisations et scripts internes
 
 
-  Rejoignez la communauté d’utilisateurs qui ont choisi Assitools pour transformer leur quotidien numérique. **Dites adieu aux lenteurs et aux dysfonctionnements** et faites place à la performance et à la stabilité ! 🚀
+
+Rejoignez la communauté d’utilisateurs qui ont choisi Assitools pour transformer leur quotidien numérique. **Dites adieu aux lenteurs et aux dysfonctionnements** et faites place à la performance et à la stabilité ! 🚀
 
 🔽 **Téléchargez Assitools dès maintenant !** 🔽  
 
