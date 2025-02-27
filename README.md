@@ -48,6 +48,11 @@
 - **Système d'exploitation** : Windows 7, 8, 8.1, 10, 11
 - **Dépendance** : Visual C++ Redistributable Runtimes 2015 (automatique avec l'installateur)
 
+- ### Langages utilisés
+- 🦀 **Rust** : Principal langage du projet
+- 🖥️ **PowerShell** : Utilisé pour certaines automatisations et scripts internes
+
+
   Rejoignez la communauté d’utilisateurs qui ont choisi Assitools pour transformer leur quotidien numérique. **Dites adieu aux lenteurs et aux dysfonctionnements** et faites place à la performance et à la stabilité ! 🚀
 
 🔽 **Téléchargez Assitools dès maintenant !** 🔽  
