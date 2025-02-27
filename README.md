@@ -12,7 +12,7 @@ En regardant son système, je découvre un disque dur saturé par des gigas de f
 
 Même histoire, des profils différents mais une cause commune : **personne ne prend le temps d’entretenir son PC**.
 
-Que ce soit papi et mamie qui se contentent d’envoyer quelques mails et de passer des appels vidéo ou les plus jeunes qui installent et désinstallent à la volée sans se soucier des fichiers résiduels, la réalité est la même : la maintenance passe toujours en dernier.
+Que ce soit papi et mamie qui se contentent d’envoyer quelques mails et de passer des appels vidéo ou les plus jeunes qui installent et désinstallent à la volée sans se soucier des fichiers résiduels, la maintenance passe toujours en dernier.
 
 Jusqu’au jour où… c’est trop tard.
 
