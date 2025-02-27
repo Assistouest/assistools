@@ -75,6 +75,6 @@ Dernière version disponible ici : [https://github.com/Assistouest/assistools/re
 
 Site officiel : [https://assistouest.fr/logiciel-maintenance-informatique/](https://assistouest.fr/logiciel-maintenance-informatique/)
 
-Le fichier a été analysé par plus de 60 antivirus (Microsoft Defender, BitDefender, Kaspersky, ESET, Malwarebytes, etc) n’a révélé aucune menace. [https://www.virustotal.com/gui/file/84421c867505635ae19c4ab17048526ef267a5baeaa888c0a25fce843194a7b0/detection](https://www.virustotal.com/gui/file/84421c867505635ae19c4ab17048526ef267a5baeaa888c0a25fce843194a7b0/detection)
+Le fichier a été analysé par plus de 60 antivirus (Microsoft Defender, BitDefender, Kaspersky, ESET, Malwarebytes, etc) et n’a révélé aucune menace. [https://www.virustotal.com/gui/file/84421c867505635ae19c4ab17048526ef267a5baeaa888c0a25fce843194a7b0/detection](https://www.virustotal.com/gui/file/84421c867505635ae19c4ab17048526ef267a5baeaa888c0a25fce843194a7b0/detection)
 
 
