@@ -1,6 +1,6 @@
 [package]
 name = "Assistools"
-version = "1.0.0"
+version = "1.1.0"
 edition = "2021"
 
 [dependencies]
@@ -17,6 +17,8 @@ chrono = "0.4"
 enigo = "0.0.14"
 encoding_rs = "0.8"
 glob = "0.3"
+fluent = "0.15"
+unic-langid = "0.9"
 
 [profile.release]
 opt-level = 3     # Optimisation maximale pour la vitesse
