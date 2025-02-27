@@ -12,3 +12,5 @@ Optimisation des performances : Ajustement des paramètres système et nettoyage
 
 Prérequis : Windows OS (7, 8, 8.1, 10, 11)
 Logiciels requis : Visual C++ Redistributable Runtimes 2015
+
+Dernière version disponible ici : https://github.com/Assistouest/assistools/releases/
