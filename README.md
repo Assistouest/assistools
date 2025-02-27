@@ -5,7 +5,7 @@
 ## Qu’est-ce qu’Assitools ? 👇
 - **Maintenance Tout-en-Un :** Un seul clic pour nettoyer votre disque, réparer votre système, mettre à jour Windows et booster les performances.
 - **Optimisation Avancée :** Des outils intelligents pour défragmenter, ajuster la mémoire virtuelle et automatiser le nettoyage de Windows.
-- - **Mise à Jour de Windows :** Télécharge et installe automatiquement les mises à jour essentielles pour garder votre PC sécurisé et performant.  
+- **Mise à Jour de Windows :** Télécharge et installe automatiquement les mises à jour essentielles pour garder votre PC sécurisé et performant.  
 - **Multilingue :** Disponible en **11 langues** pour s’adapter à vos besoins et préférences.  
 - **100% Gratuit :** Profitez d’un entretien complet de votre PC **sans frais cachés**.
 
