@@ -74,6 +74,5 @@ Rejoignez la communauté d’utilisateurs qui ont choisi Assitools pour transfor
 
 Site officiel : [https://assistouest.fr/logiciel-maintenance-informatique/](https://assistouest.fr/logiciel-maintenance-informatique/)
 
-Le fichier a été analysé par plus de 60 antivirus (Microsoft Defender, BitDefender, Kaspersky, ESET, Malwarebytes, etc) et n’a révélé aucune menace. [https://www.virustotal.com/gui/file/84421c867505635ae19c4ab17048526ef267a5baeaa888c0a25fce843194a7b0/detection](https://www.virustotal.com/gui/file/84421c867505635ae19c4ab17048526ef267a5baeaa888c0a25fce843194a7b0/detection)
-
+Assistools remplace t-il CCleaner ? [https://assistouest.fr/assistools-vs-ccleaner-pourquoi-vous-avez-besoin-des-deux/](https://assistouest.fr/assistools-vs-ccleaner-pourquoi-vous-avez-besoin-des-deux/)
 
