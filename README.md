@@ -68,7 +68,7 @@ Assitools est un logiciel gratuit de maintenance informatique conçu pour optimi
 
 
 
-Rejoignez la communauté d’utilisateurs qui ont choisi Assitools pour transformer leur quotidien numérique. **Dites adieu aux lenteurs et aux dysfonctionnements** et faites place à la performance et à la stabilité ! 🚀
+Rejoignez la communauté d’utilisateurs qui ont déjà choisi Assitools. **Dites adieu aux lenteurs et aux dysfonctionnements** et faites place à la performance et à la stabilité ! 🚀
 
 🔽 **Téléchargez Assitools dès maintenant !** 🔽  
 
