@@ -73,3 +73,11 @@ Rejoignez la communauté d’utilisateurs qui ont déjà choisi Assitools. **Dit
 Site officiel : [https://assistouest.fr/logiciel-maintenance-informatique/](https://assistouest.fr/logiciel-maintenance-informatique/)
 
 Assistools remplace t-il CCleaner ? [https://assistouest.fr/assistools-vs-ccleaner-pourquoi-vous-avez-besoin-des-deux/](https://assistouest.fr/assistools-vs-ccleaner-pourquoi-vous-avez-besoin-des-deux/) 
+
+⚠️ **Assistools n’est pas un logiciel de nettoyage comme CCleaner ou BleachBit.**  
+
+🛠️ **Le nettoyage ne représente qu’une fraction d’une bonne maintenance informatique.**
+
+✅ **Assistools se concentre avant tout sur la réparation et l’optimisation de Windows**
+
+📌 **Un logiciel dédié au nettoyage peut être un complément utile mais il ne remplace pas une véritable stratégie de maintenance préventive et corrective.**
