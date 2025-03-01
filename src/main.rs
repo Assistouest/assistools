@@ -25,6 +25,41 @@ pub enum Langue {
     Japonais,
     Swahili,
 }
+fn detecter_langue_windows() -> Langue {
+    // On récupère la locale grâce à sys-locale
+    if let Some(locale) = sys_locale::get_locale() {
+        // On met la locale en minuscules pour simplifier les comparaisons
+        let locale = locale.to_lowercase();
+        // On compare le début de la locale pour déterminer la langue
+        if locale.starts_with("fr") {
+            Langue::Francais
+        } else if locale.starts_with("en") {
+            Langue::Anglais
+        } else if locale.starts_with("es") {
+            Langue::Espagnol
+        } else if locale.starts_with("zh") {
+            Langue::Chinois
+        } else if locale.starts_with("ar") {
+            Langue::Arabe
+        } else if locale.starts_with("hi") {
+            Langue::Hindi
+        } else if locale.starts_with("pt") {
+            Langue::Portugais
+        } else if locale.starts_with("ru") {
+            Langue::Russe
+        } else if locale.starts_with("de") {
+            Langue::Allemand
+        } else if locale.starts_with("ja") {
+            Langue::Japonais
+        } else if locale.starts_with("sw") {
+            Langue::Swahili
+        } else {
+            Langue::Anglais // Valeur par défaut si la langue n'est pas reconnue
+        }
+    } else {
+        Langue::Anglais // En cas d'échec, on choisit le français
+    }
+}
 
 fn main() {
     // Tente de charger l'icône depuis le chemin spécifié
@@ -51,18 +86,25 @@ fn main() {
     };
 
     // Démarrage de l'application
-    if let Err(e) = eframe::run_native(
-        "Assistools",
-        options,
-        // Ici, dans le callback de création, on configure les polices une seule fois.
-        Box::new(|cc| {
-            // Configuration des polices avant que l'interface ne soit rendue.
-            configurer_polices(&cc.egui_ctx);
-            Ok(Box::new(AppState::default()))
-        }),
-    ) {
-        eprintln!("Échec du démarrage de l'application : {:?}", e);
-    }
+   if let Err(e) = eframe::run_native(
+    "Assistools",
+    options,
+    Box::new(|cc| {
+        // On configure d'abord les polices
+        configurer_polices(&cc.egui_ctx);
+        // On détecte la langue de Windows
+        let langue_detectee = detecter_langue_windows();
+        // On initialise l'état de l'application avec la langue détectée
+        Ok(Box::new(AppState {
+            main_app: ApplicationOptimisation {
+                langue_actuelle: langue_detectee,
+                ..Default::default()
+            },
+        }))
+    }),
+) {
+    eprintln!("Échec du démarrage de l'application : {:?}", e);
+}
 }
 
 
@@ -213,7 +255,7 @@ struct Translations {
     technical_support: &'static str,
     useful_links_title: &'static str,
     website_label: &'static str,
-    github_label: &'static str,
+  
 }
 
 /// Fonction renvoyant toutes les traductions en fonction de la langue sélectionnée
@@ -256,11 +298,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "Informations sur l'éditeur",
             publisher_name: "Éditeur : Assistouest Informatique",
-            build_number: "Numéro de build : 1.0.0",
+            build_number: "Numéro de build : 1.3",
             technical_support: "Support technique : support@assistouest.fr",
             useful_links_title: "🔗 Liens utiles",
             website_label: "🌍 Site web :",
-            github_label: "📦 Dépôt GitHub :",
+        
         },
         Langue::Anglais => Translations {
             language_label: "Language:",
@@ -299,11 +341,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "Publisher Information",
             publisher_name: "Publisher: Assistouest Informatique",
-            build_number: "Build Number: 1.0.0",
+            build_number: "Build Number: 1.3",
             technical_support: "Technical Support: support@assistouest.fr",
             useful_links_title: "🔗 Useful Links",
             website_label: "Website:",
-            github_label: "GitHub Repository:",
+         
         },
         Langue::Espagnol => Translations {
             language_label: "Idioma:",
@@ -342,11 +384,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "Información del editor",
             publisher_name: "Editor: Assistouest Informatique",
-            build_number: "Número de compilación: 1.0.0",
+            build_number: "Número de compilación: 1.3",
             technical_support: "Soporte técnico: support@assistouest.fr",
             useful_links_title: "🔗 Enlaces útiles",
             website_label: "Sitio web:",
-            github_label: "Repositorio GitHub:",
+          
         },
         Langue::Chinois => Translations {
             language_label: "语言：",
@@ -385,11 +427,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "发行信息",
             publisher_name: "发行者：Assistouest Informatique",
-            build_number: "版本号：1.0.0",
+            build_number: "版本号：1.3",
             technical_support: "技术支持：support@assistouest.fr",
             useful_links_title: "🔗 有用链接",
             website_label: "🌍 网站：",
-            github_label: "📦 GitHub 仓库：",
+       
         },
         Langue::Arabe => Translations {
             language_label: "اللغة:",
@@ -432,7 +474,7 @@ fn translations_all(langue: Langue) -> Translations {
             technical_support: "الدعم الفني: support@assistouest.fr",
             useful_links_title: "🔗 روابط مفيدة",
             website_label: "🌍 الموقع:",
-            github_label: "📦 مستودع GitHub:",
+       
         },
         Langue::Hindi => Translations {
             language_label: "भाषा:",
@@ -471,11 +513,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "प्रकाशक की जानकारी",
             publisher_name: "प्रकाशक: Assistouest Informatique",
-            build_number: "बिल्ड नंबर: 1.0.0",
+            build_number: "बिल्ड नंबर: 1.3",
             technical_support: "तकनीकी सहायता: support@assistouest.fr",
             useful_links_title: "🔗 उपयोगी लिंक",
             website_label: "🌍 वेबसाइट:",
-            github_label: "📦 GitHub रिपॉजिटरी:",
+  
         },
         Langue::Portugais => Translations {
             language_label: "Idioma:",
@@ -514,11 +556,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "Informações do Editor",
             publisher_name: "Editor: Assistouest Informatique",
-            build_number: "Número da Versão: 1.0.0",
+            build_number: "Número da Versão: 1.3",
             technical_support: "Suporte Técnico: support@assistouest.fr",
             useful_links_title: "🔗 Links Úteis",
             website_label: "🌍 Site:",
-            github_label: "📦 Repositório GitHub:",
+     
         },
      
         Langue::Russe => Translations {
@@ -558,11 +600,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "Информация об издателе",
             publisher_name: "Издатель: Assistouest Informatique",
-            build_number: "Номер сборки: 1.0.0",
+            build_number: "Номер сборки: 1.3",
             technical_support: "Техническая поддержка: support@assistouest.fr",
             useful_links_title: "🔗 Полезные ссылки",
             website_label: "🌍 Сайт:",
-            github_label: "📦 GitHub Репозиторий:",
+
         },
         Langue::Allemand => Translations {
             language_label: "Sprache:",
@@ -601,11 +643,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "Verlegerinformationen",
             publisher_name: "Verleger: Assistouest Informatique",
-            build_number: "Build-Nummer: 1.0.0",
+            build_number: "Build-Nummer: 1.3",
             technical_support: "Technischer Support: support@assistouest.fr",
             useful_links_title: "🔗 Nützliche Links",
             website_label: "🌍 Webseite:",
-            github_label: "📦 GitHub Repository:",
+    
         },
         Langue::Japonais => Translations {
             language_label: "言語：",
@@ -644,11 +686,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "発行者情報",
             publisher_name: "発行者：Assistouest Informatique",
-            build_number: "ビルド番号：1.0.0",
+            build_number: "ビルド番号：1.3",
             technical_support: "テクニカルサポート：support@assistouest.fr",
             useful_links_title: "🔗 便利なリンク",
             website_label: "🌍 ウェブサイト：",
-            github_label: "📦 GitHubリポジトリ：",
+         
         },
         Langue::Swahili => Translations {
             language_label: "Lugha:",
@@ -687,11 +729,11 @@ fn translations_all(langue: Langue) -> Translations {
             ],
             publisher_title: "Taarifa za Mchapishaji",
             publisher_name: "Mchapishaji: Assistouest Informatique",
-            build_number: "Nambari ya Ujenzi: 1.0.0",
+            build_number: "Nambari ya Ujenzi: 1.3",
             technical_support: "Msaada wa Kiufundi: support@assistouest.fr",
             useful_links_title: "🔗 Viungo vya Manufaa",
             website_label: "🌍 Tovuti:",
-            github_label: "📦 Hazina ya GitHub:",
+      
         },
     }
 }
@@ -937,12 +979,7 @@ impl eframe::App for ApplicationOptimisation {
                                 ui.hyperlink("https://assistouest.fr/logiciel-maintenance-informatique/")
                                     .on_hover_text("Visitez notre site web");
                             });
-                            ui.add_space(5.0);
-                            ui.horizontal(|ui| {
-                                ui.label(egui::RichText::new(texts.github_label).strong());
-                                ui.hyperlink("https://github.com/Assistouest/assistools/releases/")
-                                    .on_hover_text("Consultez les mises à jour et téléchargements");
-                            });
+                         
                         });
                     },
                    _ => (),
