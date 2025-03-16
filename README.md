@@ -60,19 +60,17 @@ Assitools est un logiciel gratuit de maintenance informatique conçu pour optimi
 
 ## Prérequis
 - **Système d'exploitation :** Windows 7, 8, 8.1, 10, 11
-- **Dépendance :** Visual C++ Redistributable Runtimes 2015 (automatique avec l'installateur)
+- **Dépendance :** Visual C++ Redistributable Runtimes 2015
 
 ### Langages utilisés
 - 🦀 **Rust :** Principal langage du projet  
-- 🖥️ **PowerShell :** Utilisé pour certaines automatisations et scripts internes
+- 🖥️ **PowerShell :** Utilisé pour certaines automatisations
 
-Rejoignez la communauté d’utilisateurs qui ont déjà choisi Assitools. **Dites adieu aux lenteurs et aux dysfonctionnements** et faites place à la performance et à la stabilité ! 🚀
+Rejoignez la communauté d’utilisateurs qui ont déjà choisi Assitools. **Dites adieu aux dysfonctionnements** et faites place à la performance et à la stabilité ! 🚀
 
 🔽 **Téléchargez Assitools dès maintenant !** 🔽  
 
 Site officiel : [https://assistouest.fr/logiciel-maintenance-informatique/](https://assistouest.fr/logiciel-maintenance-informatique/)
-
-Assistools remplace t-il CCleaner ? [https://assistouest.fr/assistools-vs-ccleaner-pourquoi-vous-avez-besoin-des-deux/](https://assistouest.fr/assistools-vs-ccleaner-pourquoi-vous-avez-besoin-des-deux/) 
 
 ⚠️ **Assistools n’est pas un logiciel de nettoyage comme CCleaner ou BleachBit.**  
 
