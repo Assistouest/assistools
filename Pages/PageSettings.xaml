@@ -1,0 +1,56 @@
+<Page
+    NavigationCacheMode="Required"
+    x:Class="Assistools.Pages.PageSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <StackPanel Padding="{StaticResource AppPageMargin}" Spacing="24" HorizontalAlignment="Stretch">
+
+            <StackPanel Spacing="6">
+                <TextBlock Text="Paramètres" Style="{ThemeResource TitleTextBlockStyle}" FontWeight="Bold" />
+                <TextBlock
+                    Text="Configurez le comportement d'Assistools."
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+
+            <!-- Notifications -->
+            <StackPanel Spacing="12">
+                <TextBlock Text="Notifications" Style="{ThemeResource BodyStrongTextBlockStyle}" />
+
+                <Border
+                    CornerRadius="8"
+                    BorderThickness="1"
+                    BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    Padding="16,14">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="3" VerticalAlignment="Center" Margin="0,0,16,0">
+                            <TextBlock Text="Rappel de maintenance annuel" Style="{ThemeResource BodyTextBlockStyle}" FontWeight="SemiBold" />
+                            <TextBlock
+                                Text="Recevez une notification Windows si aucune maintenance n'a été effectuée depuis 365 jours, même quand l'application est fermée."
+                                Style="{ThemeResource CaptionTextBlockStyle}"
+                                Foreground="{ThemeResource TextFillColorSecondaryBrush}"
+                                TextWrapping="Wrap" />
+                        </StackPanel>
+                        <ToggleSwitch
+                            x:Name="ToggleRappel"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"
+                            OffContent=""
+                            OnContent=""
+                            Toggled="ToggleRappel_Toggled"
+                            ToolTipService.ToolTip="Utilise le Gestionnaire des tâches Windows pour planifier le rappel" />
+                    </Grid>
+                </Border>
+            </StackPanel>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

@@ -1,1 +1,67 @@
-/target
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.log
+*.ilk
+
+# Package / distribution files
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.exe
+*.msi
+*.appx
+*.msix
+
+# Documentation (Word, PDF, etc.)
+*.docx
+*.doc
+*.pdf
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+
+# Temporary files
+*.tmp
+*.temp
+.backup/
+temp/
+
+# User-specific files
+appsettings.local.json
+local.settings.json
+
+# Output directories
+publish/
+Release/
+Debug/

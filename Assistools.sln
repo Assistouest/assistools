@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11819.183 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistools", "Assistools.csproj", "{3800BA85-C15B-EB98-CFA5-CB59B2226392}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|arm64 = Debug|arm64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|arm64 = Release|arm64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Debug|arm64.ActiveCfg = Debug|arm64
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Debug|arm64.Build.0 = Debug|arm64
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Debug|x64.ActiveCfg = Debug|x64
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Debug|x64.Build.0 = Debug|x64
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Debug|x86.ActiveCfg = Debug|x86
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Debug|x86.Build.0 = Debug|x86
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Release|arm64.ActiveCfg = Release|arm64
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Release|arm64.Build.0 = Release|arm64
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Release|x64.ActiveCfg = Release|x64
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Release|x64.Build.0 = Release|x64
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Release|x86.ActiveCfg = Release|x86
+		{3800BA85-C15B-EB98-CFA5-CB59B2226392}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9095873D-435B-4912-B8A8-95FE7CD4ED10}
+	EndGlobalSection
+EndGlobal

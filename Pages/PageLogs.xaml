@@ -1,0 +1,80 @@
+<Page
+    NavigationCacheMode="Required"
+    x:Class="Assistools.Pages.PageLogs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Padding="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- En-tête -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Spacing="4">
+                <TextBlock Text="Journal d'exécution" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock
+                    Text="Sortie en temps réel de toutes les opérations de cette session"
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+                <Button x:Name="BtnCopier" Click="BtnCopier_Click" ToolTipService.ToolTip="Copier dans le presse-papier">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <FontIcon Glyph="&#xE8C8;" FontSize="14" />
+                        <TextBlock Text="Copier" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnExporter" Click="BtnExporter_Click" ToolTipService.ToolTip="Enregistrer dans un fichier .txt">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <FontIcon Glyph="&#xE74E;" FontSize="14" />
+                        <TextBlock Text="Exporter" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="BtnEffacer" Click="BtnEffacer_Click" ToolTipService.ToolTip="Effacer le journal">
+                    <StackPanel Orientation="Horizontal" Spacing="6">
+                        <FontIcon Glyph="&#xE74D;" FontSize="14" />
+                        <TextBlock Text="Effacer" />
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <!-- Bandeau de statut -->
+        <InfoBar
+            x:Name="StatusBar"
+            Grid.Row="1"
+            IsOpen="False"
+            IsClosable="False"
+            Severity="Informational"
+            Margin="0,16,0,0" />
+
+        <!-- Terminal -->
+        <Border
+            Grid.Row="2"
+            Margin="0,16,0,0"
+            CornerRadius="6"
+            Background="#FF1E1E1E">
+            <ScrollViewer
+                x:Name="LogsScroller"
+                VerticalScrollBarVisibility="Auto"
+                HorizontalScrollBarVisibility="Auto"
+                Padding="14,10">
+                <TextBlock
+                    x:Name="LogsText"
+                    FontFamily="Consolas"
+                    FontSize="12"
+                    Foreground="#FFD0D0D0"
+                    TextWrapping="NoWrap"
+                    IsTextSelectionEnabled="True" />
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Page>

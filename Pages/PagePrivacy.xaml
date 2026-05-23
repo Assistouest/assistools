@@ -1,0 +1,237 @@
+<Page
+    NavigationCacheMode="Required"
+    x:Class="Assistools.Pages.PagePrivacy"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <StackPanel Padding="{StaticResource AppPageMargin}" Spacing="20" HorizontalAlignment="Stretch">
+
+            <!-- HEADER -->
+            <StackPanel Spacing="4">
+                <TextBlock Text="Confidentialité &amp; IA" Style="{ThemeResource TitleTextBlockStyle}" FontWeight="Bold" />
+                <TextBlock
+                    Text="Désactivez la collecte de données, les fonctions IA et les publicités personnalisées."
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+
+            <InfoBar
+                x:Name="InfoStatus"
+                IsOpen="True" IsClosable="False" Severity="Informational"
+                Message="Ces modifications nécessitent les droits administrateur et un redémarrage pour être pleinement appliquées." />
+
+            <!-- ── IA WINDOWS ── -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE950;" FontSize="15" VerticalAlignment="Center" Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                        <TextBlock Text="Intelligence artificielle Windows" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel Padding="4,0,4,8" Spacing="2">
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Windows Copilot" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive le bouton Copilot dans la barre des tâches et l'assistant IA intégré." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleCopilot" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleCopilot_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Windows Recall" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive la capture permanente d'écran par l'IA. Fortement recommandé pour la vie privée." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleRecall" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleRecall_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Copilot dans Microsoft Edge" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive Copilot, l'IA générative et l'analyse de page dans Edge." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleIaEdge" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleIaEdge_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Copilot dans Microsoft Office" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive Copilot dans Word, Excel et empêche l'entraînement sur vos données." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleIaOffice" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleIaOffice_Toggled" />
+                    </Grid>
+
+                </StackPanel>
+            </Expander>
+
+            <!-- ── TÉLÉMÉTRIE &amp; DONNÉES ── -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE72E;" FontSize="15" VerticalAlignment="Center" Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                        <TextBlock Text="Télémétrie &amp; collecte de données" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel Padding="4,0,4,8" Spacing="2">
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Télémétrie Windows" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive l'envoi de données de diagnostic à Microsoft et arrête le service DiagTrack." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleTelemetrie" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleTelemetrie_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Publicités personnalisées" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive l'identifiant publicitaire utilisé pour cibler les publicités dans les applications." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="TogglePublicites" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="TogglePublicites_Toggled" />
+                    </Grid>
+
+                </StackPanel>
+            </Expander>
+
+            <!-- ── ACCÈS CAPTEURS &amp; APPLICATIONS ── -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE703;" FontSize="15" VerticalAlignment="Center" Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                        <TextBlock Text="Accès des applications aux capteurs" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel Padding="4,0,4,8" Spacing="2">
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Localisation" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Empêche les applications d'accéder à votre position géographique." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleLocalisation" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleLocalisation_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Caméra" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Empêche les applications d'accéder à votre webcam." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleCamera" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleCamera_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Microphone" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Empêche les applications d'accéder à votre microphone." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleMicrophone" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleMicrophone_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Reconnaissance vocale en ligne" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive l'envoi de votre voix aux serveurs Microsoft pour la reconnaissance." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleVoix" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleVoix_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Historique d'activité" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive l'enregistrement de vos activités Windows (fichiers ouverts, apps utilisées)." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleActivite" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleActivite_Toggled" />
+                    </Grid>
+
+                </StackPanel>
+            </Expander>
+
+            <!-- ── DIAGNOSTICS &amp; FEEDBACK ── -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE8C5;" FontSize="15" VerticalAlignment="Center" Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                        <TextBlock Text="Diagnostics &amp; feedback Microsoft" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel Padding="4,0,4,8" Spacing="2">
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Retours d'expérience Windows" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive les demandes de feedback envoyées par Microsoft (notifications de sondage)." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleFeedback" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleFeedback_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Localiser mon appareil (Find My Device)" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive la fonctionnalité de localisation à distance de votre PC par Microsoft." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleFindMyDevice" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleFindMyDevice_Toggled" />
+                    </Grid>
+
+                </StackPanel>
+            </Expander>
+
+            <!-- ── RECHERCHE &amp; DÉMARRER ── -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE721;" FontSize="15" VerticalAlignment="Center" Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                        <TextBlock Text="Recherche &amp; menu Démarrer" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel Padding="4,0,4,8" Spacing="2">
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Bing dans la recherche Windows" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Supprime les résultats web Bing de la barre de recherche Windows." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleBing" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleBing_Toggled" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Suggestions dans le menu Démarrer" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Désactive les applications sponsorisées et les contenus suggérés dans le menu Démarrer." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleSuggestions" Grid.Column="1" VerticalAlignment="Center" OffContent="" OnContent="" Toggled="ToggleSuggestions_Toggled" />
+                    </Grid>
+
+                </StackPanel>
+            </Expander>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

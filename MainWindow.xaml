@@ -1,0 +1,176 @@
+<Window
+    x:Class="Assistools.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Assistools"
+    xmlns:tb="using:H.NotifyIcon"
+    Title="Assistools">
+
+    <Grid x:Name="RootGrid">
+        <Grid.Resources>
+            <tb:TaskbarIcon
+                x:Key="TrayIcon"
+                ToolTipText="Assistools"
+                IconSource="Assets/app.ico"
+                ContextMenuMode="SecondWindow" />
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <NavigationView
+            Grid.Row="0"
+            x:Name="NavView"
+            PaneDisplayMode="LeftCompact"
+            IsBackButtonVisible="Collapsed"
+            IsBackEnabled="False"
+            OpenPaneLength="240"
+            CompactPaneLength="52"
+            PaneTitle="Assistools"
+            SelectionChanged="NavView_SelectionChanged"
+            IsPaneToggleButtonVisible="True">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem
+                    Tag="Auto"
+                    Content="Tableau de bord"
+                    Icon="Home" />
+                <NavigationViewItem
+                    Tag="Avance"
+                    Content="Maintenance"
+                    Icon="Repair" />
+                <NavigationViewItem
+                    Tag="Perf"
+                    Content="Performances">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEC4A;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Tag="GameBooster"
+                    Content="Game Booster">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7FC;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Tag="Privacy"
+                    Content="Confidentialité &amp; IA">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE72E;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Tag="Debloat"
+                    Content="Nettoyage des apps">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE74D;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Tag="Startup"
+                    Content="Démarrage &amp; services">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE7E8;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Tag="ServicesWizard"
+                    Content="Optimisation services">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEB95;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Tag="Rapport"
+                    Content="Rapport système">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xEC50;" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+
+            <NavigationView.FooterMenuItems>
+                <NavigationViewItem
+                    x:Name="NavItemLogs"
+                    Tag="Logs"
+                    Content="Historique">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE756;" />
+                    </NavigationViewItem.Icon>
+                    <NavigationViewItem.InfoBadge>
+                        <InfoBadge x:Name="LogsBadge" Visibility="Collapsed" Style="{ThemeResource AttentionDotInfoBadgeStyle}" />
+                    </NavigationViewItem.InfoBadge>
+                </NavigationViewItem>
+                <NavigationViewItem
+                    Tag="Info"
+                    Content="À propos"
+                    Icon="Help" />
+            </NavigationView.FooterMenuItems>
+
+            <Frame x:Name="ContentFrame" CacheSize="10" />
+        </NavigationView>
+
+        <!-- Bandeau global de tâche en cours (en bas, traverse toutes les pages) -->
+        <Border
+            x:Name="GlobalTaskBar"
+            Grid.Row="1"
+            Visibility="Collapsed"
+            Background="#FF0069E2"
+            BorderThickness="0"
+            Padding="20,10,16,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <ProgressRing
+                    x:Name="GlobalTaskSpinner"
+                    Grid.Column="0"
+                    Grid.RowSpan="2"
+                    Width="22" Height="22"
+                    IsActive="True"
+                    Foreground="White"
+                    VerticalAlignment="Center"
+                    Margin="0,0,14,0" />
+
+                <TextBlock
+                    Grid.Column="1" Grid.Row="0"
+                    x:Name="GlobalTaskTitle"
+                    Text="Opération en cours…"
+                    FontSize="13"
+                    FontWeight="SemiBold"
+                    Foreground="White"
+                    TextTrimming="CharacterEllipsis" />
+
+                <TextBlock
+                    Grid.Column="1" Grid.Row="1"
+                    x:Name="GlobalTaskLine"
+                    Text=""
+                    FontSize="11"
+                    Foreground="#CCFFFFFF"
+                    TextTrimming="CharacterEllipsis" />
+
+                <HyperlinkButton
+                    Grid.Column="2"
+                    Grid.RowSpan="2"
+                    Content="Voir l'historique →"
+                    FontSize="12"
+                    Foreground="White"
+                    VerticalAlignment="Center"
+                    Click="GlobalTaskShowLogs_Click" />
+            </Grid>
+
+            <Border.RenderTransform>
+                <TranslateTransform x:Name="GlobalTaskBarTransform" Y="0" />
+            </Border.RenderTransform>
+        </Border>
+    </Grid>
+</Window>

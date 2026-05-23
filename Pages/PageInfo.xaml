@@ -1,0 +1,208 @@
+<Page
+    NavigationCacheMode="Required"
+    x:Class="Assistools.Pages.PageInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <!-- Augmentation de la marge supérieure à 56px pour éviter les conflits avec la barre de titre système -->
+        <Grid Padding="40,56,40,28" MaxWidth="1050" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!-- Identity panel (Left) -->
+                <ColumnDefinition Width="320" />
+                <!-- Gap -->
+                <ColumnDefinition Width="40" />
+                <!-- Capabilities directory (Right) -->
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- LEFT COLUMN: Identity Card -->
+            <Border Grid.Column="0" VerticalAlignment="Top" Style="{StaticResource AppCardStyle}" Padding="24">
+                <StackPanel Spacing="20">
+                    <!-- Logo & Brand Title -->
+                    <StackPanel HorizontalAlignment="Center" Spacing="12" Margin="0,10,0,10">
+                        <Image Source="/Assets/app.png" Width="96" Height="96" HorizontalAlignment="Center" />
+                        <StackPanel Spacing="4" HorizontalAlignment="Center">
+                            <TextBlock Text="Assistools" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center" Foreground="{StaticResource BrandBlueBrush}" />
+                            <Border
+                                CornerRadius="12"
+                                Background="{ThemeResource AccentFillColorTertiaryBrush}"
+                                Padding="10,4"
+                                HorizontalAlignment="Center">
+                                <TextBlock x:Name="VersionBadge" Text="" FontSize="11" FontWeight="SemiBold" Foreground="{ThemeResource AccentTextFillColorPrimaryBrush}" />
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <TextBlock
+                        Text="Logiciel professionnel de maintenance, de sécurité et d'optimisation pour Windows."
+                        FontSize="13"
+                        TextWrapping="Wrap"
+                        HorizontalTextAlignment="Center"
+                        Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+
+                    <Border Height="1" Background="{ThemeResource DividerStrokeColorDefaultBrush}" />
+
+                    <!-- Publisher details grid -->
+                    <StackPanel Spacing="10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="Éditeur" Foreground="{ThemeResource TextFillColorSecondaryBrush}" FontSize="12" />
+                            <TextBlock Grid.Column="1" Text="Assistouest Informatique" FontWeight="SemiBold" HorizontalAlignment="Right" FontSize="12" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="Édition" Foreground="{ThemeResource TextFillColorSecondaryBrush}" FontSize="12" />
+                            <TextBlock Grid.Column="1" Text="Professionnelle" FontWeight="SemiBold" HorizontalAlignment="Right" FontSize="12" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="Version" Foreground="{ThemeResource TextFillColorSecondaryBrush}" FontSize="12" />
+                            <TextBlock Grid.Column="1" x:Name="VersionDetail" Text="" FontWeight="SemiBold" HorizontalAlignment="Right" FontSize="12" />
+                        </Grid>
+                    </StackPanel>
+
+                    <Border Height="1" Background="{ThemeResource DividerStrokeColorDefaultBrush}" />
+
+                    <!-- Contact & Web Buttons -->
+                    <StackPanel Spacing="10" Margin="0,4,0,0">
+                        <Button Style="{ThemeResource AccentButtonStyle}" Click="BtnSupport_Click" HorizontalAlignment="Stretch" Height="40">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <FontIcon Glyph="&#xE715;" FontSize="13" />
+                                <TextBlock Text="Nous contacter" />
+                            </StackPanel>
+                        </Button>
+                        <Button Click="BtnSiteWeb_Click" HorizontalAlignment="Stretch" Height="40">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <FontIcon Glyph="&#xE774;" FontSize="13" />
+                                <TextBlock Text="Visiter notre site" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <!-- RIGHT COLUMN: Feature cards -->
+            <Grid Grid.Column="2" RowSpacing="12" ColumnSpacing="12" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Card 1: Tableau de bord -->
+                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource AppCardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="8" Background="#FF0069E2" HorizontalAlignment="Left">
+                            <FontIcon Glyph="&#xE80F;" FontSize="18" Foreground="White" />
+                        </Border>
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Tableau de bord" Style="{ThemeResource BodyStrongTextBlockStyle}" />
+                            <TextBlock Text="Visualiser l'état de santé du système et lancer une maintenance complète en un clic."
+                                       Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card 2: Maintenance & Réparation -->
+                <Border Grid.Row="0" Grid.Column="1" Style="{StaticResource AppCardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="8" Background="#FF0069E2" HorizontalAlignment="Left">
+                            <FontIcon Glyph="&#xE90F;" FontSize="18" Foreground="White" />
+                        </Border>
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Maintenance &amp; Réparation" Style="{ThemeResource BodyStrongTextBlockStyle}" />
+                            <TextBlock Text="Nettoyer les fichiers inutiles et réparer les fichiers système corrompus (SFC, DISM)."
+                                       Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card 3: Optimisation Performances -->
+                <Border Grid.Row="1" Grid.Column="0" Style="{StaticResource AppCardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="8" Background="#FF0069E2" HorizontalAlignment="Left">
+                            <FontIcon Glyph="&#xEC4A;" FontSize="18" Foreground="White" />
+                        </Border>
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Optimisation Performances" Style="{ThemeResource BodyStrongTextBlockStyle}" />
+                            <TextBlock Text="Optimiser le plan d'alimentation, la mémoire virtuelle et l'état des disques (défrag / TRIM)."
+                                       Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card 4: Confidentialité & Anti-IA -->
+                <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource AppCardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="8" Background="#FF0069E2" HorizontalAlignment="Left">
+                            <FontIcon Glyph="&#xE72E;" FontSize="18" Foreground="White" />
+                        </Border>
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Confidentialité &amp; Anti-IA" Style="{ThemeResource BodyStrongTextBlockStyle}" />
+                            <TextBlock Text="Désactiver la télémétrie Windows, bloquer Recall et Copilot, et contrôler les accès caméra et micro."
+                                       Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card 5: Désencombrement & Démarrage -->
+                <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource AppCardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="8" Background="#FF0069E2" HorizontalAlignment="Left">
+                            <FontIcon Glyph="&#xE74D;" FontSize="18" Foreground="White" />
+                        </Border>
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Désencombrement &amp; Démarrage" Style="{ThemeResource BodyStrongTextBlockStyle}" />
+                            <TextBlock Text="Supprimer les applications préinstallées et gérer les programmes et services au démarrage."
+                                       Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+                <!-- Card 6: Sauvegarde & Utilitaires -->
+                <Border Grid.Row="2" Grid.Column="1" Style="{StaticResource AppCardStyle}" Padding="18">
+                    <StackPanel Spacing="10">
+                        <Border Width="40" Height="40" CornerRadius="8" Background="#FF0069E2" HorizontalAlignment="Left">
+                            <FontIcon Glyph="&#xE7B8;" FontSize="18" Foreground="White" />
+                        </Border>
+                        <StackPanel Spacing="4">
+                            <TextBlock Text="Sauvegarde &amp; Utilitaires" Style="{ThemeResource BodyStrongTextBlockStyle}" />
+                            <TextBlock Text="Sauvegarder les pilotes matériels, exporter la liste des logiciels installés et consulter le journal des opérations."
+                                       Style="{ThemeResource CaptionTextBlockStyle}" Foreground="{ThemeResource TextFillColorSecondaryBrush}" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <!-- Copyright (Row 1, spans all columns) -->
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Text="© 2026 Assistouest Informatique. Tous droits réservés."
+                Style="{ThemeResource CaptionTextBlockStyle}"
+                Foreground="{ThemeResource TextFillColorTertiaryBrush}"
+                Margin="0,20,0,0"
+                HorizontalAlignment="Center" />
+        </Grid>
+    </ScrollViewer>
+</Page>

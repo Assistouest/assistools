@@ -1,0 +1,77 @@
+<Page
+    NavigationCacheMode="Required"
+    x:Class="Assistools.Pages.PageDebloat"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0">
+            <StackPanel Padding="{StaticResource AppPageMargin}" Spacing="20" HorizontalAlignment="Stretch">
+
+                <!-- HEADER -->
+                <StackPanel Spacing="4">
+                    <TextBlock Text="Nettoyage des applications" Style="{ThemeResource TitleTextBlockStyle}" FontWeight="Bold" />
+                    <TextBlock
+                        Text="Sélectionnez les applications préinstallées à supprimer. Un point de restauration sera créé automatiquement."
+                        Style="{ThemeResource BodyTextBlockStyle}"
+                        Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                </StackPanel>
+
+                <InfoBar
+                    IsOpen="True" IsClosable="False" Severity="Warning"
+                    Title="La suppression d'applications est irréversible sans le point de restauration. Vérifiez votre sélection avant de continuer." />
+
+                <!-- Sélection rapide -->
+                <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button x:Name="BtnTout" Content="Tout sélectionner" Click="BtnTout_Click" />
+                    <Button x:Name="BtnRien" Content="Tout désélectionner" Click="BtnRien_Click" />
+                    <Button x:Name="BtnDefaut" Content="Sélection recommandée" Click="BtnDefaut_Click" />
+                </StackPanel>
+
+                <!-- Liste des apps générée dynamiquement -->
+                <StackPanel x:Name="AppsPanel" Spacing="12" />
+
+                <!-- Espace en bas pour le bouton fixe -->
+                <Border Height="80" />
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Bouton fixe en bas -->
+        <Border
+            Grid.Row="1"
+            Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+            BorderBrush="{ThemeResource CardStrokeColorDefaultBrush}"
+            BorderThickness="0,1,0,0"
+            Padding="40,12,40,12">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="SelectionLabel" Grid.Column="0"
+                           Text="0 application sélectionnée"
+                           VerticalAlignment="Center"
+                           Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+                <Button
+                    x:Name="BtnSupprimer"
+                    Grid.Column="1"
+                    Style="{ThemeResource AccentButtonStyle}"
+                    Height="40"
+                    IsEnabled="False"
+                    Click="BtnSupprimer_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon Glyph="&#xE74D;" FontSize="13" />
+                        <TextBlock x:Name="BtnSupprimerText" Text="Supprimer la sélection" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

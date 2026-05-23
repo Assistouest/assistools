@@ -1,0 +1,99 @@
+<Page
+    NavigationCacheMode="Required"
+    x:Class="Assistools.Pages.PagePerf"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <StackPanel Padding="{StaticResource AppPageMargin}" Spacing="20" HorizontalAlignment="Stretch">
+
+            <StackPanel Spacing="6">
+                <TextBlock Text="Performances" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock
+                    Text="Optimisez votre ordinateur pour de meilleures performances."
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+
+            <!-- Plan d'alimentation -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE945;" VerticalAlignment="Center" />
+                        <TextBlock Text="Plan d'alimentation" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel Padding="0,8,0,8" Spacing="0">
+                    <Grid Padding="0,10,0,10">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+                        <RadioButton x:Name="RbEconomie" Grid.Column="0" VerticalAlignment="Center" GroupName="Power" Checked="PowerMode_Checked" Tag="Economie" />
+                        <StackPanel Grid.Column="1" Spacing="2" VerticalAlignment="Center">
+                            <TextBlock Text="Économie d'énergie" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Privilégie l'autonomie de la batterie." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Padding="0,10,0,10">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+                        <RadioButton x:Name="RbEquilibre" Grid.Column="0" VerticalAlignment="Center" GroupName="Power" Checked="PowerMode_Checked" Tag="Equilibre" />
+                        <StackPanel Grid.Column="1" Spacing="2" VerticalAlignment="Center">
+                            <TextBlock Text="Équilibré" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Performances adaptées à votre usage (recommandé)." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Padding="0,10,0,10">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="Auto" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+                        <RadioButton x:Name="RbPerformance" Grid.Column="0" VerticalAlignment="Center" GroupName="Power" Checked="PowerMode_Checked" Tag="Performance" />
+                        <StackPanel Grid.Column="1" Spacing="2" VerticalAlignment="Center">
+                            <TextBlock Text="Haute performance" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Performances maximales, idéal en branché." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </Expander>
+
+            <!-- Optimisation des disques -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xEDA2;" VerticalAlignment="Center" />
+                        <TextBlock Text="Optimisation des disques" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <Grid Style="{StaticResource AppItemRowStyle}">
+                    <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Spacing="2">
+                        <TextBlock Text="Optimiser les disques" Style="{StaticResource AppItemTitleStyle}" />
+                        <TextBlock Text="Réorganise les disques pour accélérer l'accès aux fichiers." Style="{StaticResource AppItemDescriptionStyle}" />
+                    </StackPanel>
+                    <Button x:Name="BtnDisques" Grid.Column="1" Content="Lancer" VerticalAlignment="Center" Click="BtnDisques_Click"
+                            ToolTipService.ToolTip="TRIM sur SSD, défragmentation sur HDD, détection automatique" />
+                </Grid>
+            </Expander>
+
+            <!-- Mémoire virtuelle -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE950;" VerticalAlignment="Center" />
+                        <TextBlock Text="Mémoire virtuelle" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <Grid Style="{StaticResource AppItemRowStyle}">
+                    <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Spacing="2">
+                        <TextBlock x:Name="MemVirtLabel" Text="Optimisée" Style="{StaticResource AppItemTitleStyle}" />
+                        <TextBlock x:Name="MemVirtDesc" Text="Fichier d'échange dimensionné selon votre RAM." Style="{StaticResource AppItemDescriptionStyle}" />
+                    </StackPanel>
+                    <ToggleSwitch x:Name="ToggleMemVirt" Grid.Column="1" VerticalAlignment="Center"
+                                  OffContent="" OnContent=""
+                                  ToolTipService.ToolTip="Activé : optimisé selon la RAM, désactivé : géré par Windows"
+                                  Toggled="ToggleMemVirt_Toggled" />
+                </Grid>
+            </Expander>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

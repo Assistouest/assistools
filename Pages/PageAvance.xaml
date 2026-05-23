@@ -1,0 +1,177 @@
+<Page
+    NavigationCacheMode="Required"
+    x:Class="Assistools.Pages.PageAvance"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <ScrollViewer>
+        <StackPanel Padding="{StaticResource AppPageMargin}" Spacing="20" HorizontalAlignment="Stretch">
+
+            <StackPanel Spacing="6">
+                <TextBlock Text="Maintenance" Style="{ThemeResource TitleTextBlockStyle}" />
+                <TextBlock
+                    Text="Lancez chaque opération séparément, à votre rythme et en toute sécurité."
+                    Style="{ThemeResource BodyTextBlockStyle}"
+                    Foreground="{ThemeResource TextFillColorSecondaryBrush}" />
+            </StackPanel>
+
+            <!-- Nettoyage et Réparation -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE74D;" VerticalAlignment="Center" />
+                        <TextBlock Text="Nettoyage et réparation" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel>
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Libérer de l'espace disque" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Supprime les fichiers temporaires, le cache et la corbeille en toute sécurité." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnNettoyage" Grid.Column="1" Content="Lancer" VerticalAlignment="Center" Click="BtnNettoyage_Click" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Réparer les fichiers Windows" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Détecte et restaure les fichiers système endommagés." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnReparation" Grid.Column="1" Content="Lancer" VerticalAlignment="Center" Click="BtnReparation_Click"
+                                ToolTipService.ToolTip="Utilise les outils DISM et SFC de Windows" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Nettoyage automatique Windows (Storage Sense)" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Windows supprime automatiquement les fichiers temporaires selon votre calendrier." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <ToggleSwitch x:Name="ToggleStorageSense" Grid.Column="1" VerticalAlignment="Center" Toggled="ToggleStorageSense_Toggled"
+                                      ToolTipService.ToolTip="Configure Storage Sense, c'est Windows qui effectue le nettoyage, pas Assistools" />
+                    </Grid>
+                </StackPanel>
+            </Expander>
+
+            <!-- Sécurité -->
+            <Expander IsExpanded="True" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE83D;" VerticalAlignment="Center" />
+                        <TextBlock Text="Sécurité" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <Grid Style="{StaticResource AppItemRowStyle}">
+                    <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0" Spacing="2">
+                        <TextBlock Text="Lancer une analyse de sécurité" Style="{StaticResource AppItemTitleStyle}" />
+                        <TextBlock Text="Met à jour les définitions et analyse votre ordinateur." Style="{StaticResource AppItemDescriptionStyle}" />
+                    </StackPanel>
+                    <Button x:Name="BtnAntivirus" Grid.Column="1" Content="Lancer" VerticalAlignment="Center" Click="BtnAntivirus_Click" />
+                </Grid>
+            </Expander>
+
+            <!-- Réparation avancée -->
+            <Expander IsExpanded="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE90F;" VerticalAlignment="Center" />
+                        <TextBlock Text="Réparation avancée" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel>
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Réparer le Microsoft Store" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="À utiliser si le Store ne s'ouvre pas ou ne télécharge plus." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnReparerStore" Grid.Column="1" Content="Lancer" VerticalAlignment="Center" Click="BtnReparerStore_Click"
+                                ToolTipService.ToolTip="Vide le cache, réinitialise et re-enregistre le package Store" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Réparer Windows Update" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="À utiliser si les mises à jour sont bloquées ou échouent." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnResetUpdate" Grid.Column="1" Content="Lancer" VerticalAlignment="Center" Click="BtnResetUpdate_Click" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Réparer la connexion réseau" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="À utiliser en cas de problème Internet ou Wi-Fi. Redémarrage requis." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnResetReseau" Grid.Column="1" Content="Lancer" VerticalAlignment="Center" Click="BtnResetReseau_Click"
+                                ToolTipService.ToolTip="Réinitialise Winsock, TCP/IP, DNS et le pare-feu" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Réparer les services système" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="À utiliser si certaines fonctions Windows ne répondent plus." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnReparerWmi" Grid.Column="1" Content="Lancer" VerticalAlignment="Center" Click="BtnReparerWmi_Click"
+                                ToolTipService.ToolTip="Vérifie et répare le référentiel WMI" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Vérifier le disque dur" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Analyse le disque au prochain redémarrage. Peut durer plusieurs heures." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnChkdsk" Grid.Column="1" Content="Programmer" VerticalAlignment="Center" Click="BtnChkdsk_Click"
+                                ToolTipService.ToolTip="Exécute CHKDSK /f /r sur le disque système" />
+                    </Grid>
+                </StackPanel>
+            </Expander>
+
+            <!-- Sauvegarde / Restauration -->
+            <Expander IsExpanded="False" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <Expander.Header>
+                    <StackPanel Orientation="Horizontal" Spacing="12">
+                        <FontIcon Glyph="&#xE7B8;" VerticalAlignment="Center" />
+                        <TextBlock Text="Sauvegarde et restauration" Style="{StaticResource AppExpanderHeaderTextStyle}" />
+                    </StackPanel>
+                </Expander.Header>
+                <StackPanel>
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Créer un point de restauration" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Sauvegarde l'état actuel pour pouvoir revenir en arrière." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnCreerPoint" Grid.Column="1" Content="Créer" VerticalAlignment="Center" Click="BtnCreerPoint_Click" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Exporter la liste des programmes" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Génère un fichier de tous vos logiciels installés (CSV)." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnExportProgs" Grid.Column="1" Content="Exporter" VerticalAlignment="Center" Click="BtnExportProgs_Click" />
+                    </Grid>
+                    <MenuFlyoutSeparator />
+                    <Grid Style="{StaticResource AppItemRowStyle}">
+                        <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Spacing="2">
+                            <TextBlock Text="Sauvegarder les pilotes" Style="{StaticResource AppItemTitleStyle}" />
+                            <TextBlock Text="Enregistre vos pilotes pour une réinstallation future." Style="{StaticResource AppItemDescriptionStyle}" />
+                        </StackPanel>
+                        <Button x:Name="BtnExportDrivers" Grid.Column="1" Content="Exporter" VerticalAlignment="Center" Click="BtnExportDrivers_Click" />
+                    </Grid>
+                </StackPanel>
+            </Expander>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>
