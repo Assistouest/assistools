@@ -6,12 +6,11 @@
 
 ## Fonctionnalités Principales
 
-Assistools repose sur une interface minimaliste proposant trois axes majeurs : le **Mode Auto**, les **Outils Avancés** et le **Booster**.
 
 * **Nettoyage Profond** : Suppression des fichiers temporaires, vidage de la corbeille, purge des caches navigateurs et du cache *Windows Update* pour libérer de l'espace disque de manière sécurisée.
 * **Réparation Système** : Lancement automatisé des outils de diagnostic officiels de Microsoft (`SFC` et `DISM`) pour vérifier l'intégrité de Windows, identifier et réparer automatiquement les fichiers systèmes corrompus.
 * **Optimisation Matérielle** : Adaptation automatique selon le type de stockage détecté. Défragmentation ciblée pour les disques mécaniques (HDD) et exécution de la commande `ReTrim` pour préserver et accélérer les disques SSD. Ajustement de la mémoire virtuelle.
-* **Sécurité et Mises à jour** : Relance et vérification des services *Windows Update*, forçage de la mise à jour des signatures de *Windows Defender* (ou *Avast*) et exécution d'une analyse de sécurité rapide.
+* **Sécurité et Mises à jour** : Relance et vérification des services *Windows Update*, forçage de la mise à jour des signatures de *Windows Defender* et exécution d'une analyse de sécurité rapide.
 * **Sécurité intégrée** : Création automatique d'un point de restauration système avant chaque action critique.
 
 ## Téléchargement et Installation
